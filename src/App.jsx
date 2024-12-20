@@ -1,19 +1,15 @@
 import { useState } from 'react';
 import './App.css'
-import { Pokedex } from 'pokeapi-js-wrapper';
-const P = new Pokedex();
+import AddPokemonModal from './components/addPokemonModal/addPokemonModal';
 
 function App() {
-  const [wew, setWew] = useState("");
+  console.log("load")
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <input onChange={(e)=>{setWew(e.target.value)}}></input>
-      <button onClick={()=>P.getPokemonByName(wew).then(function (response) {
-    console.log(response);
-      })}>
-        find
-      </button>
-      <p>{wew}</p>
+      
+      <button onClick={()=> setShowModal(!showModal)}>Add pokemon</button>
+      {showModal ? <AddPokemonModal setShowModal={setShowModal}/>:null}
     </>
   )
 }

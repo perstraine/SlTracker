@@ -1,0 +1,37 @@
+.modal_holder{
+    /* background-color: green; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.modal{
+    margin-top: 30px;
+    background-color: #404040;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player_one, .player_two{
+    width: 50%;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-find-button{
+    width: fit-content;
+}
+
